@@ -11,3 +11,13 @@ h1{
     background-position: center;
     -webkit-background-clip: text;
 }
+li{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+}
+p{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+}
