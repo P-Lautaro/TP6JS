@@ -55,19 +55,96 @@
     <ol>
         <li>¿Qué versiones de JavaScript hay en el mercado?</li>
         <li> Se utiliza la etiqueta script que debe envolver todo el código JS que escribas. Se puede agregar el código JS: entre las etiquetas head. </li>
-        <li>Las variables se pueden declarar usando var, const, o let. var tiene alcance de función, mientras que const y let tienen alcance de bloque. Las variables const no pueden ser reasignadas, mientras que las variables let si pueden serlo. var, const, y let pueden ser confusas al principio.</li>
-        <li>¿Cómo son todas las formas de declaración de funciones en JS?</li>
-        <li>¿Cuáles son los operadores y conversión entre tipos?</li>
-        <li>¿Cuáles son la estructura de control de JS?</li>
-        <li>¿Qué es el objeto dom en JS? Y ¿Cómo trabaja?</li>
-        <li>¿Qué función tiene en JS el Object Map?</li>
-        <li>¿Cuáles son todos los eventos que trabaja JS?</li>
-        <li>Con toda la investigación que generaron deben de generar un formulario que realice las siguientes funciones.</li>
+        <li>Las variables se pueden declarar usando var, const, o let. var tiene alcance de función, mientras que const y let tienen alcance de bloque. 
+            Las variables const no pueden ser reasignadas, mientras que las variables let si pueden serlo. var, const, y let pueden ser confusas al principio. <ul>
+            Los Tipos de datos básicos en JavaScript podemos decir que admite ocho tipos de datos: número, BigInt, booleano, string o cadena, valor nulo, indefinido, símbolo y objeto. 
+            Las expresiones regulares son patrones utilizados para encontrar una determinada combinación de caracteres dentro de una cadena de texto.
+            En JavaScript, las expresiones regulares también son objetos.</ul>
+            <ul>
+            Estos patrones se utilizan en algunos métodos.
+            Se emplean para:
+            - Búsqueda y reemplazo de un patrón en una cadena.
+            - Validación de campos en un formulario.
+            Una expresión regular puede crearse de cualquiera de las dos siguientes maneras:
+            Utilizando una representación literal de la expresión regular, consistente en un patrón encerrado entre diagonales:
+            var re = /ab+c/;
+            La representación literal ofrece la compilación de la expresión regular cuando se carga el script donde se encuentra. Si la expresión regular permanece constante, utilizar esta forma puede mejorar en rendimiento.
+            Llamando a la función constructora del objeto RegExp:
+            var re = new RegExp('ab+c');
+            El uso de la función constructora ofrece la compilación en tiempo de ejecución de la expresión regular. Es habitual usar la función constructora cuando se sabe que el patrón de la expresión regular cambiará, o cuando se desconozca el patrón y se obtenga de otra fuente, como por ejemplo del usuario.
+            JavaScript, expresiones regulares
+            Creación de una expresión regular
+            Un patrón de expresión regular se compone de:
+            caracteres simples, como /abc/,
+            una combinación de caracteres simples y especiales, como /ab*c/ o /Capítulo (\d+)\.\d*/.
+            </ul>
+        </li>
+
+        <li>Una de las características más importantes de las funciones en Javascript es su versatilidad. En Javascript las funciones son diferentes a las funciones de otros lenguajes de programación. En Javascript las funciones son un objeto. Por ello se les puede asignar variables, arrays u otros objetos. La forma en la cual hallamos definido nuestra función, definirá el comportamiento de la misma. Siendo los tipos de función que podemos crear en Javascript los siguientes:
+            _ Function declaration
+            _ Function expression
+            _ IIFE (Immediately Invoked Function Expression)
+            _ Shorthand method definition
+            _ Arrow function
+            _ Generator function
+            _ Function constructor 
+        </li>
+
+        <li>ToString: Ocurre cuando se muestra algo. Se puede realizar con String(value). <ul>
+            ToNumber: Ocurre en operaciones matemáticas. Se puede realizar con Number(value) 
+            ToBoolean: Ocurren en operaciones lógicas,
+            Operadores de asignación,
+            Operadores de comparación,
+            Operadores aritméticos,
+            Operadores bit a bit,
+            Operadores de cadena,
+            Operador condicional (ternario),
+            Operador coma,
+            Operadores unarios y
+            Operadores relacionales
+            </ul>
+        </li> 
+
+        <li>Las estructuras de control de JS podemos encontrar las siguientes:
+            If
+            If  else,
+            FOR
+            FOR IN,
+            SWITCH. ...
+            BUCLE FOR. ...
+            BUCLE WHILE. ...
+            BUCLE DO/WHILE
+        </li>
+
+        <li>El modelo de objeto de documento (DOM) es una interfaz de programación para los documentos HTML y XML. 
+            Facilita una representación estructurada del documento y define de qué manera los programas pueden acceder, al fin de modificar, tanto su estructura, estilo y contenido.
+            El DOM representa un documento HTML completo como un solo objeto. Para crear el DOM, el navegador web que lee el archivo HTML toma todas sus partes, desde el elemento html raíz hasta las etiquetas span más pequeñas, y las devuelve como un objeto que el JavaScript comprende.
+        </li>
+
+        <li>El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos. 
+            La sintaxis del método map() es la siguiente: arr. map(function(element, index, array){ }, this); La function() callback es llamada en cada elemento del arreglo, y el método map() siempre le pasa el element actual, el index del elemento actual y el objeto array completo.
+            Map llama a la función callback provista una vez por elemento de un array, en orden, y construye un nuevo array con los resultados. callback se invoca sólo para los índices del array que tienen valores asignados; no se invoca en los índices que han sido borrados o a los que no se ha asignado valor.
+        </li>
+
+        
+        <li>
+            
+            updateCart:	En la página del carrito, cada vez que sucede algo (cambiar la cantidad, eliminar el producto, etc.), el carrito se vuelve a cargar mediante una llamada ajax. Después de actualizar el carrito, se activa este. 
+            updatedAddressForm:	En el formulario de dirección, alguna entrada activará llamadas ajax para modificar el formulario (como el cambio de país), después de actualizar el formulario, se activa este evento.<ul>
+            updateDeliveryForm:	Durante el pago, si se modifica la dirección de entrega, se activará este evento.</ul>
+            changedCheckoutStep: Cada envío del paso de pago activará este evento.<ul>
+            updateProductList:	En cada página de la lista de productos (categoría, resultados de búsqueda, caída de precios, etc.), la lista se actualiza a través de llamadas ajax si cambia los filtros o las opciones de clasificación. Cada vez que el DOM se vuelve a cargar con una nueva lista de productos, se activa este evento.</ul>
+            clickQuickView:	Si su tema lo maneja, este evento se activará cuando haga clic en el enlace de vista rápida.<ul>
+            updateProduct:	En la página del producto, seleccionar una nueva combinación recargará el DOM a través de llamadas ajax. Este evento se activará después de modificar la combinación, pero antes de la llamada ajax.</ul>
+            updatedProduct:	En la página del producto, seleccionar una nueva combinación recargará el DOM a través de llamadas ajax. Después de la actualización, este evento se dispara.<ul>
+            handleError: Este evento se activa después de un error en la solicitud POST. Tiene eventType como primer parámetro.</ul>
+            updateFacets: En cada página de la lista de productos (categoría, resultados de búsqueda, caída de precios, etc.), la lista se actualiza a través de llamadas ajax si cambia los filtros o las opciones de clasificación. Cada vez que se recargan las facetas, se activa este evento. </ul>
+        </li>
+        
         <li>¿Qué obtenga los datos del input?</li>
         <li>¿Qué verifique los datos que se ingresan en el input?</li>
         <li>¿Qué el formulario presente un cálculo de sumatoria para validar ¿Qué no sos un robot”?</li>
     </ol>
-
     </div>
 </body>
 </html>
