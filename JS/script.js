@@ -21,3 +21,5 @@ const observador = new IntersectionObserver(cargarImagen, {
 
 observador.observe(imagen1);
 observador.observe(imagen2);
+
+
