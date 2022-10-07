@@ -1,7 +1,7 @@
 body{
     background-color: darkgray;
 }
-h1{
+h1,p{
     text-align: center;
     margin-top: 100px;
     font-size: 100px;
